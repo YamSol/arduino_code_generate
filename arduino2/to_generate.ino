@@ -7,17 +7,18 @@ void setup()
 void loop()
 {
 
-  int bin[] = {&list&};
+//  int bin[] = {&list&};
   boolean primeira;
+  String strn = "..- --. / ..- --./";
 
-  for(int i=0; i<=&list_size&; i++){
+  for(int i=0; i<=strn.length(); i++){
     
-    if(bin[i] == 1){
+    if(strn[i] == '-'){
       digitalWrite(led, HIGH);
       delay(1000);  
     }
 
-    if(bin[i] == 0){
+    if(strn[i] == '.'){
       digitalWrite(led, LOW);
       delay(1000);
     }
