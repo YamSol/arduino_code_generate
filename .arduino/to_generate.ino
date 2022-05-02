@@ -1,15 +1,17 @@
 #define led 12
+#define 
+
 void setup()
 {
   pinMode(12, OUTPUT);
+
 }
 
 void loop()
 {
 
-//  int bin[] = {&list&};
   boolean primeira;
-  String strn = "..- --. / ..- --./";
+  String strn = "&morse&";
 
   for(int i=0; i<=strn.length(); i++){
     

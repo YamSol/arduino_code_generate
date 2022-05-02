@@ -1,10 +1,14 @@
-def generate_arduino():
+def generate_arduino(path_out, morse_string):
+    path = ".arduino/to_generate.ino"
+    with open(path, "r") as f:
+        txt = "".join(f.read()).replace('&morse&', morse_string)
+    with open(path_out, "w") as f:
+        f.write()
 
-    lst = [0,0,1,1,1,0,0]
 
-    f = open("arduino/to_generate.ino", "r")
-    texto = f.read()
-    texto.replace("a", "AAA")
-    return(texto)
 
-print(generate_arduino())
+path = ".arduino/to_generate.ino"
+morse = "- .... .. ... / .. ... / .- / -- . ... ... .- --. . / ... . -. -.. . -.. / - --- / --. . -. . .-. .- - . / .- .-. -.. ..- .. -. ---"
+
+out = generate_arduino(path, morse)
+print(out)
